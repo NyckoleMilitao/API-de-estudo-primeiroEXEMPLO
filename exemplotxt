@@ -1,0 +1,32 @@
+Objetivo:
+
+Criar uma API RestFull para controle de produtos
+Modelo:OK
+      Produtos: 
+
+        id (um identificador dizendo que ele é unico no nosso banco  que vai ser criado automaticamente)
+        nome
+        quantidade
+        valor
+        observação
+
+Repositorio de produtos: (Neste primeiro momento ele não vai se comunicar com o banco de dados, ele vai simular um)
+    (Metodos para um CRUDE)
+    obterTodos, OK
+    obterPorId, OK
+    adcionar, OK
+    atualizar, OK
+    deletar OK
+
+Serviço de produto: Ele tem que ter as mesmas coisas que o meu repositorio, pq ele vai pedir para o meu repositorio resolver essas coisas
+A diferenca é que ele pode ter regra de negocio ou não
+(Metodos para um CRUDE)
+    obterTodos, OK
+    obterPorId, OK
+    adcionar, OK
+    atualizar, OK
+    deletar OK
+
+Controller de produto: Ele vai ser a classe principal, para poder trabalhar com todos esse metodos aqui na nossa API
+vai ser nosso endpoint proncipal
+Ele tem que conhecer todos os metodos CRUDE, mas vai ser um pouco diferente
