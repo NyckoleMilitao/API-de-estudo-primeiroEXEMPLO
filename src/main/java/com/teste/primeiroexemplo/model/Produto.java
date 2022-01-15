@@ -2,6 +2,7 @@ package com.teste.primeiroexemplo.model;
 
 public class Produto {
 
+    //Essa é a classe model
     //#region Atributos
     private Integer id;
    

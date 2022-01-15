@@ -2,20 +2,30 @@ package com.teste.primeiroexemplo.model.Error;
 
 public class ErrorMessage {
 //#region
-    private String titulodoerro;
+    private String tituloDoErro;
 
     private Integer statusDoErro;
 
     private String Mensagem;
 
-    public String getTitulodoerro() {
-        return titulodoerro;
-    }
+    
 //#endregion
 
-//#region
-    public void setTitulodoerro(String titulodoerro) {
-        this.titulodoerro = titulodoerro;
+
+    public ErrorMessage(String tituloDoErro, Integer statusDoErro, String mensagem) {
+        this.tituloDoErro = tituloDoErro;
+        this.statusDoErro = statusDoErro;
+        Mensagem = mensagem;
+    }
+
+
+
+    public String getTitulodoerro() {
+        return tituloDoErro;
+    }
+
+    public void setTitulodoerro(String tituloDoErro) {
+        this.tituloDoErro = tituloDoErro;
     }
 
     public Integer getStatusDoErro() {

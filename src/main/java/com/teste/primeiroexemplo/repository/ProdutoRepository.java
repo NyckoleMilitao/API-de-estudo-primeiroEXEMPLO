@@ -2,11 +2,12 @@ package com.teste.primeiroexemplo.repository;
 
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
+
 import java.util.List;
 import java.util.Optional;
 
 import com.teste.primeiroexemplo.model.Produto;
+import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
 
 import org.springframework.stereotype.Repository;
 
@@ -89,7 +90,8 @@ public class ProdutoRepository {// Esse repositorio simula um BD
 
         // se produto encontrado for vazio= Empty faça
         if(produtoEncontrado.isEmpty()){
-            throw new InputMismatchException("Produto não encontrado");
+            throw new ResourceNotFoundException("Produto não encontrado");
+            //Eu só consigo usar essa exception, pq eu a criei dentro de handler
         }
         
         //Eu tenho que remover o produto antigo da Lista
